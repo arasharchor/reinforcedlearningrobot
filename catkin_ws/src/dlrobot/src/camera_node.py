@@ -33,7 +33,6 @@ class camera_node:
         self.logfile.write(buf)
         print filename
 
-
 def main(args):
     ic = camera_node()
     try:
