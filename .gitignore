@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+#collected data folder
+/collected_data/*
+
+# PyCharm
+.idea
