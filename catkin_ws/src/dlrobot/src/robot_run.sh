@@ -6,18 +6,13 @@ openni2pid=$!
 echo "Starting openni2..."
 sleep 5
 
-# reconfigure the camera resolution
-# NOT ALL modes are supported - mode 5,8 and 11 are supported in color mode!
-rosrun dynamic_reconfigure dynparam set /camera/driver  "{'color_mode':'8', 'depth_mode':'8', 'ir_mode':'8'}" 2>&1 &
-
-# PS 3 controller (Turn on bluetooth)
-#echo 'ubuntu' | sudo -S sixad -s &
-#sixpid=$1 # Save the PID so we can kill it later
-
 # launch kobuki node
 roslaunch kobuki_node minimal.launch  > kobuki.log 2>&1 &
 kobukipid=$!
 
+# reconfigure the camera resolution
+# NOT ALL modes are supported - mode 5,8 and 11 are supported in color mode!
+rosrun dynamic_reconfigure dynparam set /camera/driver  "{'color_mode':'8', 'depth_mode':'8', 'ir_mode':'8'}" 2>&1 &
 
 # function called by trap
 ctrl_c() {
@@ -25,7 +20,6 @@ ctrl_c() {
 	# Clean up and kill the processes
 	kill $openni2pid
 	kill $kobukipid
-	#kill $sixpid
 	exit
 }
 
@@ -40,4 +34,3 @@ done
 
 kill $openni2pid
 kill $kobukipid
-#kill $sixpid
