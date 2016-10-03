@@ -89,7 +89,7 @@ ENV/
 .ropeproject
 
 #collected data folder
-/collected_data/*
+collected_data/
 
 # PyCharm
 .idea

@@ -26,7 +26,7 @@ class camera_node:
 
     def callback(self, data):
         cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
-        filename = '../../../../collected_data/colorImg_%s.png' % self.imgnr
+        filename = 'collected_data/colorImg_%s.png' % self.imgnr
         cv2.imwrite(filename, cv_image)
         self.imgnr += 1
         buf = "%f; %f; colorImg_%s\n" % (0, 0, self.imgnr)
