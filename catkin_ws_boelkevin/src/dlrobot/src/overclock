@@ -1,0 +1,5 @@
+#!/bin/bash
+sudo su -c 'echo 852000000 >  /sys/kernel/debug/clock/override.gbus/rate'
+sudo su -c 'echo 1 > /sys/kernel/debug/clock/override.gbus/state'
+sudo su -c 'cat /sys/kernel/debug/clock/override.gbus/rate'
+sudo su -c 'cat /sys/kernel/debug/clock/override.gbus/state'

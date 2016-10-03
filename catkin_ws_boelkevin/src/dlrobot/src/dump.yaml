@@ -1,0 +1,47 @@
+!!python/object/new:dynamic_reconfigure.encoding.Config
+dictitems:
+  auto_exposure: true
+  auto_white_balance: true
+  color_depth_synchronization: false
+  color_mode: 5
+  color_time_offset: -0.033
+  data_skip: 0
+  depth_ir_offset_x: 5.0
+  depth_ir_offset_y: 4.0
+  depth_mode: 5
+  depth_registration: false
+  depth_time_offset: -0.033
+  groups: !!python/object/new:dynamic_reconfigure.encoding.Config
+    dictitems:
+      auto_exposure: true
+      auto_white_balance: true
+      color_depth_synchronization: false
+      color_mode: 5
+      color_time_offset: -0.033
+      data_skip: 0
+      depth_ir_offset_x: 5.0
+      depth_ir_offset_y: 4.0
+      depth_mode: 5
+      depth_registration: false
+      depth_time_offset: -0.033
+      groups: !!python/object/new:dynamic_reconfigure.encoding.Config
+        state: []
+      id: 0
+      ir_mode: 5
+      ir_time_offset: -0.033
+      name: Default
+      parameters: !!python/object/new:dynamic_reconfigure.encoding.Config
+        state: []
+      parent: 0
+      state: true
+      type: ''
+      use_device_time: true
+      z_offset_mm: 0
+      z_scaling: 1.0
+    state: []
+  ir_mode: 5
+  ir_time_offset: -0.033
+  use_device_time: true
+  z_offset_mm: 0
+  z_scaling: 1.0
+state: []
