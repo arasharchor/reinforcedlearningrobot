@@ -9,6 +9,7 @@ sleep 5
 # launch kobuki node
 roslaunch kobuki_node minimal.launch  > kobuki.log 2>&1 &
 kobukipid=$!
+sleep 1
 
 # reconfigure the camera resolution
 # NOT ALL modes are supported - mode 5,8 and 11 are supported in color mode!
