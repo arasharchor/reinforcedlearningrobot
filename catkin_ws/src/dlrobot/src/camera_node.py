@@ -1,16 +1,8 @@
 import rospy
 from sensor_msgs.msg import Image
 import cv2
-from cv_bridge import CvBridge, CvBridgeError
-import sixaxis
-from geometry_msgs.msg import Twist
-import subprocess
-import time
+from cv_bridge import CvBridge
 import sys
-import numpy as np
-import caffe
-
-import os
 
 caffe_root = '~/caffe'
 sys.path.insert(0, caffe_root + 'python')
